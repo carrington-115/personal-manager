@@ -8,10 +8,10 @@ export default function Home() {
         <img src="/images/long-logo.png" />
         <div className="flex flex-row gap-10">
           <Button className="text-base" asChild>
-            <Link href="/register">Go to Dashboard</Link>
+            <Link href="/(app)">Go to Dashboard</Link>
           </Button>
           <Button variant={"secondary"} asChild>
-            <Link href="">Login</Link>
+            <Link href="/register">Login</Link>
           </Button>
         </div>
       </header>
