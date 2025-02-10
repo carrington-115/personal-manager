@@ -20,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" type="image/png" href="/images/short-logo.png" />
       <body className={`${roboto.variable} antialiased`}>{children}</body>
     </html>
   );
