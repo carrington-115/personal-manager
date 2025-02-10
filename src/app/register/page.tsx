@@ -18,7 +18,7 @@ export default function componentName() {
   return (
     <div className="container h-screen flex flex-col justify-center items-center">
       <section className="w-[36%] flex flex-col gap-10 items-center p-10 border border-gray-200 rounded-lg">
-        <img src="/images/long-logo.png" />
+        <img src="/images/long-logo.svg" />
         {formStatus ? (
           <form
             className="w-full flex flex-col gap-2.5"
