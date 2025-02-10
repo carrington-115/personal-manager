@@ -6,7 +6,7 @@ import { MailOpen } from "lucide-react";
 import React from "react";
 
 export default function componentName() {
-  const [formStatus, setFormStatus] = React.useState<boolean>(false);
+  const [formStatus, setFormStatus] = React.useState<boolean>(true);
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };

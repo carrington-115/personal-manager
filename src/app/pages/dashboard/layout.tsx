@@ -10,10 +10,8 @@ export default function componentName({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <>
-      <body>
-        <main>{children}</main>
-      </body>
-    </>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
