@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search, Settings, User } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 export default function componentName() {
@@ -24,10 +25,14 @@ export default function componentName() {
         </div>
         <div className="flex flex-row gap-10 items-center w-1/4 ">
           <Button variant={"secondary"} size={"icon"}>
-            <Settings />
+            <Link href="/pages/settings">
+              <Settings />
+            </Link>
           </Button>
           <Button variant={"secondary"} size={"icon"}>
-            <User />
+            <Link href="/pages/profile">
+              <User />
+            </Link>
           </Button>
         </div>
       </header>

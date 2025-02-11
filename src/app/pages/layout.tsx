@@ -31,9 +31,9 @@ export default function componentName({
     <html lang="en">
       <body className="container w-screen h-screen flex overflow-hidden">
         <Sidebar links={linkElements} />
-        <main className="w-full h-full overflow-y-auto">
+        <main className="w-full h-full">
           <Header />
-          <section className="px-16">{children}</section>
+          <section className="px-10 w-full h-full">{children}</section>
         </main>
       </body>
     </html>
