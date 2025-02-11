@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 import "../globals.css";
-import { Sidebar } from "../../../ui-components";
+import { Header, Sidebar } from "../../../ui-components";
 import {
   CircleCheckBig,
   Cog,
@@ -31,7 +31,10 @@ export default function componentName({
     <html lang="en">
       <body className="container w-screen h-screen flex overflow-hidden">
         <Sidebar links={linkElements} />
-        <main>{children}</main>
+        <main className="w-full h-full overflow-y-auto">
+          <Header />
+          <section className="px-16">{children}</section>
+        </main>
       </body>
     </html>
   );
