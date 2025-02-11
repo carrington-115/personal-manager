@@ -8,7 +8,7 @@ export default function Home() {
         <img src="/images/long-logo.png" />
         <div className="flex flex-row gap-10">
           <Button className="text-base" asChild>
-            <Link href="/pages">Go to Dashboard</Link>
+            <Link href="/pages/dashboard">Go to Dashboard</Link>
           </Button>
           <Button variant={"secondary"} asChild>
             <Link href="/register">Login</Link>

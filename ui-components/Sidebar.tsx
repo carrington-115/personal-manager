@@ -14,23 +14,11 @@ import Link from "next/link";
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { SidebarIconsProps } from "../types";
 
-interface SidebarIconsProps {
-  icon: React.ReactNode;
-  title: string;
-  link: string;
-  view?: boolean;
-}
-
-const linkElements: SidebarIconsProps[] = [
-  { icon: <Home />, title: "Dashboard", link: "/pages/dashboard" },
-  { icon: <CircleCheckBig />, title: "Tasks", link: "/pages/tasks" },
-  { icon: <PanelsTopLeft />, title: "Projects", link: "/pages/projects" },
-  { icon: <UserRoundCog />, title: "Profile", link: "/pages/profile" },
-  { icon: <Cog />, title: "Settings", link: "/pages/settings" },
-];
-
-export default function componentName() {
+export default function componentName({
+  links,
+}: Readonly<{ links: SidebarIconsProps[] }>) {
   const [sideBarLarge, setSideBarLarge] = React.useState<boolean>(false);
 
   return (
@@ -84,7 +72,7 @@ export default function componentName() {
               {sideBarLarge && <p style={{ fontSize: 24 }}>Create</p>}
             </button>
             <nav className="flex flex-col" style={{ gap: 20 }}>
-              {linkElements.map((linkElement, index) => (
+              {links.map((linkElement, index) => (
                 <LinkComponent
                   key={index}
                   {...linkElement}
@@ -120,7 +108,7 @@ const LinkComponent = ({ icon, title, link, view }: SidebarIconsProps) => {
   const pathname = usePathname();
 
   const linkStyles = {
-    backgroundColor: pathname === link ? "#F3EDF7" : "#F3EDF7",
+    backgroundColor: pathname === link ? "#F3EDF7" : "transparent",
     borderRadius: 40,
     gap: 10,
     display: "flex",
